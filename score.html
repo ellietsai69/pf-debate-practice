@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>評分與錯題本｜PF 辯論練習場</title>
+<meta name="description" content="Public Forum 12 週練習計畫與親子互動遊戲">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="index.html">PF 辯論練習場</a>
+<nav aria-label="主選單"><a href="index.html">首頁</a><a href="plan.html">12 週計畫</a><a href="games.html">練習遊戲</a><a href="score.html" aria-current="page">評分與錯題本</a><a href="learn.html">PF 教室</a><a href="news.html">時事節目</a><a href="camps.html">營隊參考</a></nav></div></header>
+<main class="wrap">
+<h1>評分與錯題本</h1><p class="lead">家長不懂規則也能評：聽完問自己，「我能不能說出這一隊為什麼贏？」</p><h2>每週評分</h2><div class="card"><label for="wk">週次</label><select id="wk"></select><div id="qs"></div><p class="q">總分 <span id="tot">0</span> / 12</p><button class="go" id="save">存下這週</button> <span id="msg" role="status"></span></div><h3>紀錄</h3><ul id="scores"></ul>
+<h2>錯題本</h2><form class="card" id="mf"><p><label for="ma">哪個環節</label><select id="ma"><option>Constructive</option><option>Crossfire</option><option>Rebuttal</option><option>Summary</option><option>Final Focus</option></select></p><p><label for="mb">發生什麼、為什麼</label><input type="text" id="mb" required maxlength="150"></p><p><label for="mc">下次一句話怎麼說</label><input type="text" id="mc" required maxlength="200"></p><p class="small">請不要寫姓名、學校等個人資料。</p><button class="go">加入錯題本</button></form><ul id="errs"></ul>
+</main>
+<footer><div class="wrap small">進度只存在你的瀏覽器，不會上傳。換裝置或清除瀏覽資料就會消失。<br>家庭自學用，非任何賽事或營隊官方網站；規則以主辦單位為準。</div></footer>
+<script src="app.js"></script><script src="score.js"></script>
+</body>
+</html>
