@@ -12,3 +12,6 @@ const next=[...document.querySelectorAll('.week')].find(w=>!w.classList.contains
 if(next)next.open=true;
 $('#openall').onclick=e=>{const ws=[...document.querySelectorAll('.week')],o=!ws.every(w=>w.open);ws.forEach(w=>w.open=o);e.target.textContent=o?'全部收起':'全部展開'};
 $('#print').onclick=()=>{document.querySelectorAll('.week').forEach(w=>w.open=true);window.print()};
+// 從地圖點進來時，打開那一週
+function openWeek(){const w=document.getElementById(location.hash.slice(1));if(w?.classList.contains('week')){w.open=true;w.scrollIntoView()}}
+addEventListener('hashchange',openWeek);openWeek();
